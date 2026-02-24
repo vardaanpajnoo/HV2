@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>HackVerse 2.0 | IILM University</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+    --primary:#6C63FF;
+    --secondary:#00C9A7;
+    --accent:#FFB400;
+    --light:#f7f9fc;
+    --dark:#111;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:var(--light);color:var(--dark);}
+header{padding:15px 8%;background:white;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+header .logo{font-size:24px;color:var(--primary);font-weight:700;}
+nav a{margin:0 15px;color:var(--dark);text-decoration:none;font-weight:500;}
+.hero{padding:70px 8%;text-align:center;background:linear-gradient(135deg,#eef2ff,#e0f7fa);}
+.hero-logo{width:150px;margin-bottom:15px;}
+.hero h1{font-size:48px;color:var(--primary);}
+.hero p{margin:8px 0;font-size:18px;}
+.section{padding:60px 8%;}
+.section h2{text-align:center;color:var(--primary);font-size:32px;margin-bottom:25px;}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.05);}
+.card h3{color:var(--secondary);margin-bottom:12px;}
+.carousel{position:relative;overflow:hidden;border-radius:12px;max-width:900px;margin:0 auto 30px;}
+.carousel-inner{display:flex;transition:0.5s;}
+.carousel-inner img{width:100%;flex-shrink:0;}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.8);border:none;padding:10px;cursor:pointer;font-size:18px;border-radius:50%;}
+.carousel-btn.left{left:10px;} .carousel-btn.right{right:10px;}
+footer{text-align:center;padding:20px;background:white;box-shadow:0 -4px 1px rgba(0,0,0,0.1);font-size:14px;}
+
+@media(max-width:768px){.hero h1{font-size:34px;}}
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <!-- Logo -->
+    <a href="#home" class="logo">
+    <img src="images/iilm-logo.png" alt="IILM University">
+</a>
+
+    <!-- Hamburger -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <!-- Nav links -->
+    <nav id="nav-links">
+        <a href="#about">About</a>
+        <a href="#tracks">Tracks</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<section id="home" class="hero">
+    <img src="images/hackverse-logo.png" class="hero-logo" alt="HackVerse 2.0 Logo">
+    <h1>HACKVERSE 2.0</h1>
+    <p>Break limits, build solutions.</p>
+    <p><strong>7th April 2026 | 09:30 AM Onwards</strong></p>
+    <p>IILM University, Gurugram</p>
+    <a href="https://forms.gle/uKp65sCeDf8bmVuB7" class="register-btn" style="display:inline-block;margin-top:15px;padding:12px 30px;background:var(--primary);color:white;border-radius:50px;text-decoration:none;font-weight:600;">Register Now</a>
+    <div class="countdown">
+        <div class="time-box">
+            <span id="days">00</span>
+            <p>Days</p>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            <p>Hours</p>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="section" id="about">
+    <h2>About the School</h2>
+    <p>The School of Computer Science & Engineering at IILM University, Gurugram offers cutting-edge academic programs designed to prepare students for the future of technology. Our B Tech in Computer Science & Engineering includes specializations in:<br>
+
+
+<br>- Artificial Intelligence & Machine Learning (AI/ML)
+<br>- Data Science & Big Data Analytics
+<br>- Cloud Computing
+<br>- CyberSecurity
+<br>- Robotics
+<br>- Data Engineering
+<br>- Full-Stack Development
+<br>- Generative AI<br>
+
+<br>We also offer M Tech and PhD programs for advanced research and academic pursuits. Under the visionary leadership of Dr. Shamik Tiwari, Founding Dean, the school emphasizes innovation, research, and industry collaboration. Strategic partnerships with leading companies such as HCL, Microsoft, Xebia, and L&T ensure that students gain real-world exposure and hands-on experience. The school hosts three Centers of Excellence (CoEs):<br>
+
+
+<br>- Center of Excellence in Artificial Intelligence (AI): Focuses on machine learning, deep learning, data analytics, natural language processing, and intelligent systems.
+<br>- Center of Excellence in CyberSecurity and Digital Forensics: Covers cybersecurity, ethical hacking, network security, cryptography, cyber laws, and digital forensics.
+<br>- Center of Excellence in Robotics and Automation: Supports learning and research in robotics, embedded systems, industrial automation, control systems, IoT, and Robot Operating System (ROS).</p>
+</section>
+
+<section class="dean-section">
+    <div class="dean-container">
+
+        <!-- Image -->
+        <div class="dean-image">
+            <img src="/images/dean-sir.png" alt="Dean">
+        </div>
+
+        <!-- Text -->
+        <div class="dean-content">
+            <h2>Message from the Dean</h2>
+            <p>
+                Welcome to Hackverse 2.0, Our institution is dedicated to fostering innovation, creativity, and technological excellence. This hackathon provides a dynamic platform for you to showcase your skills, collaborate with passionate and like-minded innovators, and explore cutting-edge solutions to real-world challenges. We look forward to witnessing your groundbreaking ideas and the impact you will create through Hackverse 2.0.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="tracks">
+    <h2>Tracks & Themes</h2>
+    <div class="grid2">
+        <div class="card"><h3>AI & Machine Learning</h3></div>
+        <div class="card"><h3>Robotics & AI Systems</h3></div>
+        <div class="card"><h3>Smart Solutions with IoT</h3></div>
+        <div class="card"><h3>Sustainable Green Future</h3></div>
+        <div class="card"><h3>FinTech & Blockchain</h3></div>
+        <div class="card"><h3>Open Innovation</h3></div>
+    </div>
+</section>
+
+<section class="section" id="sponsors">
+    <h2>Our Previous Sponsors</h2>
+    <div class="grid2">
+        <div class="card"><img src="images/logo1.png" alt="Past Image 1"><h3>Atomy</h3></div>
+        <div class="card"><img src="images/logo2.png" alt="Past Image 1"><h3>Dew Solutions</h3></div>
+        <div class="card"><img src="images/logo3.png" alt="Past Image 1"><h3>SAPRO</h3></div>
+    </div>
+   <br><div class="center-btn">
+    <a href="https://drive.google.com/file/d/16OLJeTSybLF8w6wB3mKMXabtnLaAtPp0/view?usp=drivesdk" target="_blank" class="sponsor-btn">
+        Become our Sponsor
+    </a>
+</div>
+
+<section id="schedule" class="schedule-section">
+
+    <h2 class="schedule-title">Event Schedule</h2>
+
+    <div class="schedule-container">
+
+        <div class="schedule-card">
+            <span class="time">09:30 AM</span>
+            <span class="event">Registration & Check-in</span>
+        </div>
+
+        <div class="schedule-card">
+            <span class="time">10:30 AM</span>
+            <span class="event">Opening Ceremony</span>
+        </div>
+
+        <div class="schedule-card">
+            <span class="time">11:00 AM</span>
+            <span class="event">Hackathon Begins</span>
+        </div>
+
+        <div class="schedule-card">
+            <span class="time">12:30 PM</span>
+            <span class="event">Lunch Break</span>
+        </div>
+
+        <div class="schedule-card">
+            <span class="time">01:00 PM</span>
+            <span class="event">Judging</span>
+        </div>
+
+        <div class="schedule-card">
+            <span class="time">04:00 PM</span>
+            <span class="event">Valedictory & Prizes</span>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="prizes">
+    <h2>Prize Pool</h2>
+    <div class="grid2">
+        <div class="card"><h3>1st Prize: ₹31,000</h3></div>
+        <div class="card"><h3>2nd Prize: ₹21,000</h3></div>
+        <div class="card"><h3>3rd Prize: ₹11,000</h3></div>
+        <div class="card"><h3>5 Consolations: ₹2,000 each</h3></div>
+    </div>
+</section>
+
+<section class="section" id="team">
+    <h2>Core Team</h2>
+    <div class="grid2">
+        <div class="card"><img src="images/profile1.png" class="circle-img" alt="Past Image 1"><h3>Dr. Puja Acharya<br>Convenor</h3></div>
+        <div class="card"><img src="images/profile2.png" class="circle-img" alt="Past Image 1"><h3>Dr. Pallavi Pandey<br>Faculty Coordinator</h3></div>
+        <div class="card"><img src="images/profile3.png" class="circle-img" alt="Past Image 1"><h3>Dr. Puneet Bawa<br>Faculty Coordinator</h3></div>
+        <div class="card"><img src="images/profile4.png" class="circle-img" alt="Past Image 1"><h3>Mr. Aashish Kaushik<br>Technical Lead</h3></div>
+        <div class="card"><img src="images/profile5.png" class="circle-img" alt="Past Image 1"><h3>Mr. Vardaan Pajnoo<br>Technical Lead</h3></div>
+    </div>
+</section>
+
+<!-- Carousel -->
+<section class="section" id="gallery">
+    <h2>Gallery - HackVerse Past Events</h2>
+    <div class="carousel">
+        <div class="carousel-inner" id="carouselInner">
+            <img src="images/prev1.jpg" alt="Past Image 1">
+            <img src="images/prev2.jpg" alt="Past Image 2">
+            <img src="images/prev3.jpg" alt="Past Image 3">
+            <img src="images/prev4.jpg" alt="Past Image 3">
+            <img src="images/prev5.jpg" alt="Past Image 3">
+        </div>
+        <button class="carousel-btn left" onclick="prevSlide()">❮</button>
+        <button class="carousel-btn right" onclick="nextSlide()">❯</button>
+    </div>
+</section>
+
+<section id="faq" class="faq-section">
+    <div class="faq-container">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <button class="faq-question">When and where is Hackverse 2.0 taking place?</button>
+            <div class="faq-answer">
+                <p>Hackverse 2.0 will be held on 7th April 2026 at IILM University, Gurugram. Participants should arrive at least 30 minutes before the event begins.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What is the registration fee and how do I sign up?</button>
+            <div class="faq-answer">
+                <p>The registration fee is ₹399. You can register by filling out the registration form available on the website before 31st March 2026.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Can I participate alone or do I need a team?</button>
+            <div class="faq-answer">
+                <p>You can participate solo or in a team of 2–4 members. If you are in a team, appoint a team leader for communication with organizers.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">What are the tracks or themes for the hackathon?</button>
+            <div class="faq-answer">
+                <p>Participants can build projects under themes such as AI & Machine Learning, IoT, FinTech & Blockchain, Sustainable Solutions, and Open Innovation.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">How will projects be judged and what prizes can I win?</button>
+            <div class="faq-answer">
+                <p>Projects will be judged based on innovation, technical complexity, impact, and presentation. Cash prizes and goodies will be given to top teams.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <h2 class="contact-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+        <!-- Left side -->
+        <div class="contact-left">
+            <h3>📍 IILM UNIVERSITY</h3>
+            <p>For any questions, please contact:</p>
+
+            <p>📞 Devansh Datta: <span>9871993246</span></p>
+            <p>✉️ Mail us: <span>hackverse.iilmggn@gmail.com</span></p>
+
+
+            <!-- Social -->
+            <div class="socials">
+                <a href="https://www.instagram.com/coera.iilm?igsh=MXR0MzI2dDhpOGJwcw==" target="_blank" class="insta">
+                    <i class="fab fa-instagram"></i> Follow us on Instagram
+                </a>
+            </div>
+        </div>
+
+        <!-- Right side -->
+        <div class="contact-right">
+            <h3>📍 Venue</h3>
+            <p>
+                IILM University, Knowledge Center,<br>
+                Golf Course Rd, Sector 53,<br>
+                Gurugram, Haryana 122011
+            </p>
+
+            <!-- Map -->
+            <div class="map">
+                <iframe 
+                    src="https://maps.google.com/maps?q=IILM%20University%20Gurugram&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%" 
+                    height="250" 
+                    style="border:0;" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 HackVerse 2.0 | IILM University
+</footer>
+
+<script>
+/* -------- Carousel -------- */
+let idx = 0;
+const carousel = document.getElementById("carouselInner");
+const total = carousel.children.length;
+
+function showSlide(){
+    carousel.style.transform = "translateX(" + (-idx*100) + "%)";
+}
+
+function nextSlide(){
+    idx = (idx + 1) % total;
+    showSlide();
+}
+
+function prevSlide(){
+    idx = (idx - 1 + total) % total;
+    showSlide();
+}
+
+setInterval(nextSlide, 4000);
+
+
+/* -------- Navbar Toggle -------- */
+function toggleMenu(){
+    var menu = document.getElementById("nav-links");
+
+    if(menu.style.display === "flex"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+const eventDate = new Date("April 7, 2026 09:30:00").getTime();
+
+setInterval(function(){
+
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+</script>
+<script id="faq-js">
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    btn.addEventListener("click", () => {
+        // close all other answers
+        faqItems.forEach(i => {
+            if(i !== item) {
+                i.querySelector(".faq-answer").style.maxHeight = null;
+            }
+        });
+
+        if(answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+        }
+    });
+});
+</script>
+<script>
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+</script>
+</body>
+</html>
