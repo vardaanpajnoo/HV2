@@ -367,10 +367,21 @@ html {
     font-weight: bold;
     color: #6c63ff;
 }
+.time-box p span{
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
 
 .time-box p{
-    font-size: 8px;
-    margin-top: 5px;
+    .time-box p,
+    .time-box .label-full,
+    .time-box .label-short{font-size: 14px;
+                           font-weight: 500;
+                           color: #000;
+                           margin-top: 5px;
+                           letter-spacing: 0.5px;
+}
 }
 /* Desktop Default → Show Full Words */
 .label-short{
@@ -483,6 +494,7 @@ section {
     scroll-margin-top: 100px;
 
 }
+
 
 
 
