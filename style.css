@@ -357,7 +357,7 @@ html {
     background: white;
     padding: 15px 18px;
     border-radius: 10px;
-    min-width: 80px;
+    min-width: 90px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
@@ -465,4 +465,5 @@ html {
 }
 section {
     scroll-margin-top: 100px;
+
 }
